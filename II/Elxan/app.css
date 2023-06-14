@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+/*Top Nav started*/
+.topNav {
+    background: #2e3192;
+    padding: 10px 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topNav p {
+    color: #fff;
+    letter-spacing: .3px;
+}
+
+.topNav-right {
+    display: flex;
+    gap: 40px;
+}
+
+@media screen and (max-width:1150px) {
+    .topNav {
+        display: none;
+    }
+}
+
+/*Top Nav end*/
+
+/*Nav started*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+#menuIcon {
+    max-width: 26px;
+    max-height: 26px;
+    cursor: pointer;
+}
+
+nav>h1 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav>h1>span {
+    color: orange;
+}
+
+nav>ul {
+    display: flex;
+    gap: 50px;
+}
+
+nav>ul>li {
+    padding: 20px 0;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: #2e3192;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav>ul>li>img {
+    width: 14px;
+}
+
+nav>ul>li:hover {
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+
+nav>ul>li:hover .subLinks {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-btn>button {
+    padding: 8px 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: none;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: #2e3192;
+}
+
+.subLinks {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background: #fff;
+    z-index: 99;
+    top: 100%;
+    border: 1px solid gray;
+    width: 200px;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.subLinks>span {
+    color: gray;
+}
+
+.subLinks>span:hover {
+    color: orange;
+}
+
+@media screen and (max-width:1150px) {
+    nav>ul {
+        display: none;
+    }
+}
+
+/*Nav end*/
+
+/*Features started*/
+
+.features-s>.container{
+    padding: 3em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+}
+.features-s>.container>.card{
+    display: flex;
+    align-items: start;
+    gap: 3em;
+    width: 40em;
+}
+.features-s>.container>.card>img{
+    width: 8.8em;
+}
+
+.features-s>.container>.card>.card-txt>h2{
+    margin-bottom: .6em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    font-size: 2.1em;
+}
+.features-s>.container>.card>.card-txt>p{
+    font-size: 1.6em;
+    color: gray;
+    letter-spacing: .11em;
+}
+@media screen and (max-width:450px) {
+    .features-s>.container>.card{
+        font-size: 2vw;
+    }
+}
+
+/*Features end*/
+
+/*Expert Doctors started*/
+.experts-s{
+
+}
+#hedingMiniTitle{
+    margin-top: 50px;
+    color: red;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2.3px;
+}
+#hedingBigTitle{
+    text-align: center;
+    font-size: 44px;
+    font-weight: 500;
+    color: #2e3192;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+#hedingDesc{
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    color: gray;
+    line-height: 26px;
+    letter-spacing: 1.2px;
+    font-size: 19px;
+}
+.experts-s>.container{
+    padding: 70px 10px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.experts-s>.container>.card{
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.experts-s>.container>.card>img{
+    width: 90%;
+}
+.experts-s>.container>.card>.share-wrapper{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    right: 280px;
+    top: 40px;
+    left: -3px;
+    transition: .5s;
+    padding: 8px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.65);
+    height: 50px;
+}
+.experts-s>.container>.card>.share-wrapper>img{
+    height: 90%;
+}
+.experts-s>.container>.card:hover .share-wrapper{
+    right: 180px;
+}
+/*Expert Doctors end*/
+
+
+/*Working Hours Start*/
+.workingHours>.container{
+    padding: 100px 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.workingHours>.container>.card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 413px;
+}
+.workingHours>.container>.card>img{
+    width: 100%;
+}
+.workingHours>.container>.card>h1{
+    font-size: 26px;
+    color: #2e3192;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.workingHours>.container>.card>p{
+    font-size: 16px;
+    color: gray;
+    font-weight: 300;
+    letter-spacing: .7px;
+}
+.workingHours>.container>.card>button{
+    background: none;
+    color: #2e3192d5;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #2e3192;
+}
+
+.workingHours>.container>.card>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.workingHours>.container>.card>ul>li{
+    font-size: 14px;
+    letter-spacing: .9px;
+    color: rgb(66, 66, 66);
+    font-weight: 300;
+}
+.workingHours>.container>.card>ul>li>span{
+    color: red;
+    font-weight: 400;
+    margin-right: 4px;
+}
+.card-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    width: 413px;
+    background: rgb(255, 236, 239);
+}
+.card-table>h1{
+    color: #2e3192;
+    font-size: 36px;
+    font-weight: 500;
+}
+.card-table>ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.card-table>ul>li{
+    font-size: 17px;
+    color: gray;
+    letter-spacing: 2px;
+}
+.card-table>button{
+    background: #2e3192;
+    color: #fff;
+    font-size: 20px;
+    padding: 18px 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*Working Hours End*/
+
+
